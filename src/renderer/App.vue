@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-app dark>
-      <v-toolbar app dense fixed>
+      <v-toolbar app color="pink darken-3" dense fixed>
         <v-toolbar-title v-text="title" />
         <v-spacer />
         <v-btn icon @click="minimize">
