@@ -3,7 +3,7 @@
 ## About
 **Author** - Evan Harry  
 **Created** - 02/06/2018  
-**Description** - Pong implimented in VueJS with Electron
+**Description** - Pong implimented in VueJS + Electron
 
 ## Installation
 ```bash

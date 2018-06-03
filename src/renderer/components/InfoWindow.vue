@@ -2,13 +2,15 @@
   <v-card raised>
     <v-card-text>
       <span class="subheading">Score</span>
-      <br />
-      <span class="body-2">{{ $store.state.score.current }}</span>
+      <div>
+        <span class="body-2">Points</span>
+        <span class="body-1" style="float: right;">{{ $store.state.score.current }}</span>
+      </div>
     </v-card-text>
     <v-card-text>
       <span class="subheading">Help</span>
       <div v-for="(item, i) in help" :key="i">
-        <span class="body-2 text-xs-left">{{ item.key }}</span>
+        <span class="body-2">{{ item.key }}</span>
         <span class="body-1" style="float: right;">{{ item.description }}</span>
       </div>
     </v-card-text>

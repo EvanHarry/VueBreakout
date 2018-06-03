@@ -18,7 +18,7 @@
       </v-content>
       <v-footer app color="secondary" fixed>
         <v-spacer />
-        <div>Made with &hearts; by Evan Harry &copy; {{ new Date().getFullYear() }}</div>
+        <div>Made with &hearts; by Evan Harry</div>
         <v-spacer />
       </v-footer>
     </v-app>
@@ -30,7 +30,7 @@
     name: 'vue-pong',
     data () {
       return {
-        title: 'VuePong'
+        title: 'Pong'
       }
     },
     methods: {
