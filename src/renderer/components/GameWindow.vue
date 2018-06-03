@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import { collisionDetection, createBricks, drawBricks } from '@/game/bricks'
+
 export default {
   name: 'game-window',
   computed: {
@@ -27,6 +29,7 @@ export default {
     return {
       ballX: 0,
       ballY: 0,
+      bricks: null,
       yFactor: 2,
       xFactor: 2,
       ballRadius: 10,
@@ -59,14 +62,28 @@ export default {
       this.ctx.clearRect(0, 0, this.maxWidth, this.maxHeight)
 
       this.drawBall()
+      drawBricks(this.bricks, this.ctx)
       this.drawPaddle()
+
+      let { bricks, collision, count } = collisionDetection(this.ballX, this.ballY, this.bricks)
+
+      this.bricks = bricks
+
+      if (collision) {
+        this.yFactor = -this.yFactor
+        this.$store.commit('score/INCREASE_CURRENT_SCORE')
+      }
+
+      if (count === 0) {
+        this.resetGame()
+        this.sendSignal()
+      }
 
       if (this.ballY <= 0 + this.ballRadius) {
         this.yFactor = 2
       } else if (this.ballY >= this.maxHeight - this.ballRadius) {
         if (this.ballX > this.paddleX && this.ballX < this.paddleX + this.paddleWidth) {
           this.yFactor = -2
-          this.$store.commit('score/INCREASE_CURRENT_SCORE')
         } else {
           this.resetGame()
           this.sendSignal()
@@ -107,6 +124,8 @@ export default {
 
       this.xFactor = 2
       this.yFactor = 2
+
+      this.bricks = createBricks()
 
       this.startGame()
     },
@@ -164,6 +183,9 @@ export default {
   ],
   watch: {
     gamePaused (val) {
+      if (this.resetSignal) {
+        return
+      }
       if (val === true) {
         this.pauseGame()
       } else {
