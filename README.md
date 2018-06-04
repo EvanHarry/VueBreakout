@@ -1,14 +1,14 @@
-# VuePong
+# VueBreakout
 
 ## About
 **Author** - Evan Harry  
 **Created** - 02/06/2018  
-**Description** - Pong implimented in VueJS + Electron
+**Description** - Breakout implimented in VueJS + Electron
 
 ## Installation
 ```bash
-git clone https://github.com/EvanHarry/VuePong.git
-cd VuePong
+git clone https://github.com/EvanHarry/VueBreakout.git
+cd VueBreakout
 npm install
 ```
 

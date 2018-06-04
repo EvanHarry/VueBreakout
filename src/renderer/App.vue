@@ -27,10 +27,10 @@
 
 <script>
   export default {
-    name: 'vue-pong',
+    name: 'vue-breakout',
     data () {
       return {
-        title: 'Pong'
+        title: 'Breakout'
       }
     },
     methods: {

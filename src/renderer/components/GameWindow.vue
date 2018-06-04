@@ -183,9 +183,6 @@ export default {
   ],
   watch: {
     gamePaused (val) {
-      if (this.resetSignal) {
-        return
-      }
       if (val === true) {
         this.pauseGame()
       } else {

@@ -1,8 +1,8 @@
 {
-  "name": "vue-pong",
+  "name": "vue-breakout",
   "version": "0.1.0",
   "author": "Evan Harry <evan.harry@apg-aarl.co.uk>",
-  "description": "Pong implimented in VueJS + Electron",
+  "description": "Breakout implimented in VueJS + Electron",
   "license": null,
   "main": "./dist/electron/main.js",
   "scripts": {
@@ -19,8 +19,8 @@
     "postinstall": "npm run lint:fix"
   },
   "build": {
-    "productName": "Pong",
-    "appId": "com.evanharry.pong",
+    "productName": "Breakout",
+    "appId": "com.evanharry.breakout",
     "directories": {
       "output": "build"
     },
