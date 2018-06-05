@@ -4,7 +4,7 @@
       <span class="subheading">Score</span>
       <div>
         <span class="body-2">Points</span>
-        <span class="body-1" style="float: right;">{{ $store.state.score.current }}</span>
+        <span class="body-1" style="float: right;">{{ currentScore }}</span>
       </div>
     </v-card-text>
     <v-card-text>
@@ -24,8 +24,15 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'info-window',
+  computed: {
+    ...mapGetters([
+      'currentScore'
+    ])
+  },
   data () {
     return {
       help: [

@@ -54,7 +54,7 @@ export default {
     gameReset (val) {
       if (val === true) {
         this.gamePaused = false
-        this.$store.commit('score/RESET_CURRENT_SCORE')
+        this.$store.commit('RESET_CURRENT_SCORE')
       }
     }
   }

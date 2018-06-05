@@ -71,7 +71,7 @@ export default {
 
       if (collision) {
         this.yFactor = -this.yFactor
-        this.$store.commit('score/INCREASE_CURRENT_SCORE')
+        this.$store.commit('INCREASE_CURRENT_SCORE')
       }
 
       if (count === 0) {
@@ -168,7 +168,7 @@ export default {
   },
   mounted () {
     let canvas = this.$refs.canvas
-    canvas.height = this.$el.clientHeight - 36
+    canvas.height = this.$el.clientHeight
     canvas.width = this.$el.clientWidth
 
     document.addEventListener('keydown', this.keyDownHandler, false)

@@ -16,11 +16,11 @@
           <router-view />
         </v-container>
       </v-content>
-      <v-footer app color="secondary" fixed>
+      <!-- <v-footer app color="secondary" fixed>
         <v-spacer />
         <div>Made with &hearts; by Evan Harry</div>
         <v-spacer />
-      </v-footer>
+      </v-footer> -->
     </v-app>
   </div>
 </template>

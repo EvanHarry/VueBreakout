@@ -50,6 +50,9 @@
     },
     "linux": {
       "icon": "build/icons"
+    },
+    "nsis": {
+      "artifactName": "${productName}-${version}.${ext}"
     }
   },
   "dependencies": {

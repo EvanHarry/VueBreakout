@@ -2,6 +2,12 @@ const state = {
   current: 0
 }
 
+const getters = {
+  currentScore: state => {
+    return state.current
+  }
+}
+
 const mutations = {
   INCREASE_CURRENT_SCORE (state) {
     state.current++
@@ -12,7 +18,7 @@ const mutations = {
 }
 
 export default {
+  getters,
   mutations,
-  namespaced: true,
   state
 }
